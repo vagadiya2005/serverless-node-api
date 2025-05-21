@@ -1,44 +1,30 @@
 {
-  "name": "@capire/samples",
-  "version": "3.0.0",
-  "description": "A monorepo with several samples for CAP.",
-  "repository": "https://github.com/sap-samples/cloud-cap-samples.git",
-  "author": "daniel.hutzel@sap.com",
-  "workspaces": [
-    "bookshop",
-    "bookstore",
-    "common",
-    "fiori",
-    "orders",
-    "reviews",
-    "shared-db",
-    "etc/data-viewer",
-    "etc/loggers"
-  ],
-  "devDependencies": {
-    "@cap-js/cds-test": "^0"
-  },
+  "name": "samples",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "cds watch bookshop --open http://localhost:4004",
-    "bookstore": "cds watch bookstore",
-    "bookshop": "cds watch bookshop",
-    "fiori": "cds watch fiori",
-    "orders": "cds watch orders",
-    "reviews": "cds watch reviews",
-    "lint": "npx eslint",
-    "test": "chest test",
-    "jest": "npx jest",
-    "mocha": "npx mocha",
-    "node:test": "node --test",
-    "build": "mbt build -t gen --mtar mta.tar",
-    "deploy": "cf deploy gen/mta.tar",
-    "undeploy": "cf undeploy capire.samples --delete-services --delete-service-keys"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "mocha": {
-    "recursive": true,
-    "parallel": true,
-    "timeout": 6666
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0"
   },
-  "license": "SEE LICENSE IN LICENSE",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^22.15.21",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
 }
